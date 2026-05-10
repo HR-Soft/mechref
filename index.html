@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MechRef — Mechanical Engineering Reference</title>
+  <meta name="description" content="Professional mechanical engineering reference and calculator app. Threads, fits, gears, springs, shafts and more. Based on international standards."/>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20viewBox%3D%220%200%201000%201000%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20.cls-1%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%231e1b4b%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.cls-2%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20%231a6bc4%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.cls-3%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20url%28%23radial-gradient%29%3B%0A%20%20%20%20%20%20%20%20stroke-width%3A%205px%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.cls-3%2C%20.cls-4%20%7B%0A%20%20%20%20%20%20%20%20stroke%3A%20%231e1b4b%3B%0A%20%20%20%20%20%20%20%20stroke-linecap%3A%20round%3B%0A%20%20%20%20%20%20%20%20stroke-linejoin%3A%20round%3B%0A%20%20%20%20%20%20%7D%0A%0A%20%20%20%20%20%20.cls-4%20%7B%0A%20%20%20%20%20%20%20%20fill%3A%20none%3B%0A%20%20%20%20%20%20%20%20stroke-dasharray%3A%201.32%20.33%3B%0A%20%20%20%20%20%20%20%20stroke-width%3A%203px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/style%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22radial-gradient%22%20cx%3D%22500.53%22%20cy%3D%22499.47%22%20fx%3D%22500.53%22%20fy%3D%22499.47%22%20r%3D%22400.03%22%20gradientUnits%3D%22userSpaceOnUse%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e5e2df%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e6eaed%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%23e8f4ff%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22.28%22%20stop-color%3D%22%23e5f2fe%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22.44%22%20stop-color%3D%22%23ddedfc%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22.58%22%20stop-color%3D%22%23cfe5f8%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22.7%22%20stop-color%3D%22%23bbdaf2%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22.81%22%20stop-color%3D%22%23a1cbeb%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22.9%22%20stop-color%3D%22%2381b9e3%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%235ca3d9%22/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%235ba3d9%22/%3E%0A%20%20%20%20%3C/radialGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3Cg%20id%3D%22Badge%22%3E%0A%20%20%20%20%3Cg%20id%3D%22POLYLINE%22%3E%0A%20%20%20%20%20%20%3Cpath%20class%3D%22cls-3%22%20d%3D%22M154.09%2C699.5c-71.45-123.76-71.45-276.24%2C0-400C264.55%2C108.18%2C509.18%2C42.63%2C700.5%2C153.09s256.87%2C355.09%2C146.41%2C546.41h13.59c22.09%2C0%2C40%2C17.91%2C40%2C40v120c0%2C22.09-17.91%2C40-40%2C40H140.5c-22.09%2C0-40-17.91-40-40v-120c0-22.09%2C17.91-40%2C40-40h13.59Z%22/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22Cruz%22%3E%0A%20%20%20%20%3Cg%20id%3D%22LINE%22%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-4%22%20x1%3D%22500%22%20y1%3D%22700%22%20x2%3D%22500%22%20y2%3D%22100%22/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%20%20%3Cg%20id%3D%22LINE-2%22%20data-name%3D%22LINE%22%3E%0A%20%20%20%20%20%20%3Cline%20class%3D%22cls-4%22%20x1%3D%22180.16%22%20y1%3D%22500%22%20x2%3D%22819.84%22%20y2%3D%22500%22/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22Arco%22%3E%0A%20%20%20%20%3Cg%20id%3D%22POLYLINE-2%22%20data-name%3D%22POLYLINE%22%3E%0A%20%20%20%20%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M250.7%2C699.5c-93.6-116.91-93.6-283.09%2C0-400%2C110.46-137.96%2C311.84-160.26%2C449.8-49.8%2C137.96%2C110.46%2C160.26%2C311.84%2C49.8%2C449.8h49.53c110.46-165.32%2C65.98-388.88-99.33-499.33-165.32-110.46-388.88-65.98-499.33%2C99.33-80.89%2C121.06-80.89%2C278.94%2C0%2C400h49.53Z%22/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22MechRef%22%3E%0A%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M142.83%2C852.04v-103.86h16.46l41.2%2C62.79%2C40.29-62.79h16.3v103.86h-18.86v-64.17c0-1.24.07-2.82.21-4.72.14-1.9.32-4.03.54-6.39-1.1%2C2.69-2.07%2C4.9-2.9%2C6.63-.83%2C1.74-1.57%2C3.16-2.23%2C4.27l-32.85%2C51.88h-4.05l-32.93-52.08c-1.21-1.97-2.25-3.82-3.1-5.55-.86-1.73-1.56-3.42-2.11-5.06.17%2C2.16.29%2C4.13.37%2C5.9.08%2C1.77.12%2C3.47.12%2C5.11v64.17h-16.46Z%22/%3E%0A%20%20%20%20%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M283.33%2C852.04v-85.09h76.86v15.03h-59.24v18.57h34.5v14.64h-34.5v20.93h60.15v15.92h-77.77Z%22/%3E%0A%20%20%20%20%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M438.97%2C782.57h-47.08v53.16h47.08v-18.08l17.62%2C4.23v10.02c0%2C7.73-1.3%2C13.02-3.89%2C15.87-2.59%2C2.85-7.56%2C4.27-14.89%2C4.27h-44.76c-7.23%2C0-12.14-1.41-14.73-4.23-2.59-2.82-3.89-8.12-3.89-15.92v-44.91c0-7.73%2C1.28-13%2C3.85-15.82%2C2.56-2.82%2C7.49-4.23%2C14.77-4.23h44.76c7.39%2C0%2C12.37%2C1.41%2C14.93%2C4.23%2C2.56%2C2.82%2C3.85%2C8.09%2C3.85%2C15.82v8.25l-17.62%2C3.05v-15.72Z%22/%3E%0A%20%20%20%20%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M475.14%2C852.04v-85.09h17.62v32.33h54.52v-32.33h17.46v85.09h-17.46v-35.87h-54.52v35.87h-17.62Z%22/%3E%0A%20%20%20%20%20%20%3Cpath%20class%3D%22cls-2%22%20d%3D%22M592.97%2C852.04v-103.86h74.8c6.95%2C0%2C11.98%2C1.59%2C15.1%2C4.77%2C3.12%2C3.18%2C4.67%2C8.3%2C4.67%2C15.38v24.37c0%2C7.01-1.56%2C12.12-4.67%2C15.33-3.12%2C3.21-8.15%2C4.82-15.1%2C4.82h-11.42l40.38%2C39.21h-29.21l-35.25-39.21h-19.28v39.21h-20.02ZM658.74%2C766.16h-45.75v28.89h45.75c3.53%2C0%2C5.94-.6%2C7.24-1.82%2C1.3-1.21%2C1.94-3.36%2C1.94-6.44v-12.48c0-3.01-.65-5.12-1.94-6.34-1.3-1.21-3.71-1.82-7.24-1.82Z%22/%3E%0A%20%20%20%20%20%20%3Cpath%20class%3D%22cls-2%22%20d%3D%22M709.31%2C852.04v-85.09h76.86v15.03h-59.24v18.57h34.5v14.64h-34.5v20.93h60.15v15.92h-77.77Z%22/%3E%0A%20%20%20%20%20%20%3Cpath%20class%3D%22cls-2%22%20d%3D%22M802.15%2C852.04v-85.09h76.04v15.23h-58.41v22.21h31.44v15.82h-31.44v31.84h-17.62Z%22/%3E%0A%20%20%20%20%3C/g%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20id%3D%22M%22%3E%0A%20%20%20%20%3Cpath%20class%3D%22cls-1%22%20d%3D%22M264.87%2C646.17v-300.22h67.07l168.26%2C178.19%2C167.47-178.19h67.46v300.22h-77.78v-206.62l-153.58%2C170.57h-16.27l-155.56-165.71v201.77h-67.07Z%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0a0c0a;
+      --bg2: #0f120f;
+      --surface: #141814;
+      --border: #1e241e;
+      --green: #2d7a3a;
+      --green-bright: #3daa50;
+      --green-glow: #4fc962;
+      --amber: #d4820a;
+      --text: #b8c4b8;
+      --text-dim: #4a584a;
+      --heading: #e8f0e8;
+      --condensed: 'Barlow Condensed', sans-serif;
+      --body: 'Barlow', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NOISE */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10,12,10,0.85);
+      backdrop-filter: blur(12px);
+    }
+    .nav-logo {
+      font-family: var(--condensed);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--heading);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--green-bright); }
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--green-bright); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 120px 40px 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 60px;
+    }
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.1s;
+    }
+    .hero-eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--green-bright); }
+    h1 {
+      font-family: var(--condensed);
+      font-size: clamp(52px, 7vw, 88px);
+      font-weight: 700;
+      line-height: 0.95;
+      letter-spacing: -0.01em;
+      color: var(--heading);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.2s;
+    }
+    h1 em { font-style: normal; color: var(--green-bright); display: block; }
+    .hero-sub {
+      font-family: var(--condensed);
+      font-size: clamp(16px, 2vw, 20px);
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.3s;
+    }
+    .hero-desc {
+      font-size: 15px;
+      color: var(--text);
+      max-width: 440px;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.4s;
+    }
+    .hero-badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.5s;
+    }
+    .badge-pill {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      color: var(--text-dim);
+    }
+    .badge-pill.highlight { border-color: var(--green); color: var(--green-bright); background: rgba(45,122,58,0.08); }
+    .cta-group { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.6s ease forwards 0.6s; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--condensed);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 13px 28px;
+      border-radius: 3px;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary { background: var(--green-bright); color: #050805; }
+    .btn-primary:hover { background: var(--green-glow); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(77,201,98,0.25); }
+    .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover { border-color: var(--green); color: var(--green-bright); }
+    .coming-soon-note { font-family: var(--mono); font-size: 10px; color: var(--text-dim); letter-spacing: 0.08em; margin-top: 12px; }
+
+    /* HERO VISUAL */
+    .hero-visual {
+      position: relative;
+      height: 600px;
+      opacity: 0;
+      animation: fadeIn 0.8s ease forwards 0.5s;
+    }
+    .phone-frame {
+      position: absolute;
+      border-radius: 36px;
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06);
+      background: #111;
+    }
+    .phone-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .phone-main {
+      width: 220px; height: 476px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      animation: floatCenter 4s ease-in-out infinite;
+    }
+    .phone-left {
+      width: 180px; height: 390px;
+      top: 50%; left: -10px;
+      transform: translateY(-50%) rotate(-6deg);
+      z-index: 2; opacity: 0.7;
+      animation: floatLeft 4s ease-in-out infinite 0.8s;
+    }
+    .phone-right {
+      width: 180px; height: 390px;
+      top: 50%; right: -10px;
+      transform: translateY(-50%) rotate(6deg);
+      z-index: 2; opacity: 0.7;
+      animation: floatRight 4s ease-in-out infinite 1.6s;
+    }
+    .hero-visual::before {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(45,122,58,0.25) 0%, transparent 70%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    /* STATS */
+    .stats-bar { background: var(--surface); border-bottom: 1px solid var(--border); border-top: 1px solid var(--border); }
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 40px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .stat-item { text-align: center; padding: 0 20px; border-right: 1px solid var(--border); }
+    .stat-item:last-child { border-right: none; }
+    .stat-number { font-family: var(--condensed); font-size: 36px; font-weight: 700; color: var(--green-bright); line-height: 1; margin-bottom: 4px; }
+    .stat-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); }
+
+    /* SECTIONS */
+    section { max-width: 1200px; margin: 0 auto; padding: 100px 40px; }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-label::before { content: ''; width: 24px; height: 1px; background: var(--green-bright); }
+    h2 {
+      font-family: var(--condensed);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      color: var(--heading);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .section-intro { font-size: 15px; color: var(--text); max-width: 560px; margin-bottom: 60px; }
+
+    /* MODULES GRID */
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .module-card {
+      background: var(--bg2);
+      padding: 28px;
+      transition: background 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .module-card:hover { background: var(--surface); }
+    .module-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 0;
+      background: var(--green-bright);
+      transition: height 0.3s ease;
+    }
+    .module-card:hover::before { height: 100%; }
+    .module-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+      display: inline-block;
+    }
+    .tag-free { background: rgba(45,122,58,0.15); color: var(--green-bright); border: 1px solid rgba(45,122,58,0.3); }
+    .tag-pro  { background: rgba(212,130,10,0.12); color: var(--amber);        border: 1px solid rgba(212,130,10,0.25); }
+    .module-name { font-family: var(--condensed); font-size: 22px; font-weight: 600; letter-spacing: 0.02em; color: var(--heading); margin-bottom: 6px; text-transform: uppercase; }
+    .module-desc { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+
+    /* PRO */
+    .pro-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .pro-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .pro-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      border: 1px solid rgba(212,130,10,0.3);
+      padding: 5px 12px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
+    .pro-features { list-style: none; margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .pro-features li { font-size: 13px; color: var(--text); display: flex; align-items: center; gap: 10px; }
+    .pro-features li::before { content: '→'; color: var(--amber); font-family: var(--mono); font-size: 12px; flex-shrink: 0; }
+    .pro-price-box { background: var(--bg); border: 1px solid var(--border); padding: 40px; text-align: center; }
+    .price-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 16px; }
+    .price-value { font-family: var(--condensed); font-size: 64px; font-weight: 700; color: var(--heading); line-height: 1; margin-bottom: 8px; }
+    .price-note { font-family: var(--mono); font-size: 11px; color: var(--green-bright); letter-spacing: 0.08em; margin-bottom: 32px; }
+    .price-perks { list-style: none; text-align: left; border-top: 1px solid var(--border); padding-top: 24px; }
+    .price-perks li { font-size: 13px; color: var(--text); padding: 6px 0; display: flex; align-items: center; gap: 10px; }
+    .price-perks li::before { content: '✓'; color: var(--green-bright); font-family: var(--mono); font-size: 11px; }
+
+    /* SCREENSHOTS */
+    .screenshots-scroll {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 20px 0 40px;
+      scrollbar-width: none;
+    }
+    .screenshots-scroll::-webkit-scrollbar { display: none; }
+    .screenshot-item {
+      flex-shrink: 0;
+      width: 200px;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
+      transition: transform 0.3s ease;
+    }
+    .screenshot-item:hover { transform: translateY(-8px); }
+    .screenshot-item img { width: 100%; display: block; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-logo { font-family: var(--condensed); font-size: 18px; font-weight: 700; letter-spacing: 0.08em; color: var(--heading); }
+    .footer-logo span { color: var(--green-bright); }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--green-bright); }
+    .footer-copy { font-family: var(--mono); font-size: 10px; color: var(--text-dim); letter-spacing: 0.06em; }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp  { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn  { from { opacity:0; } to { opacity:1; } }
+    @keyframes floatCenter { 0%,100% { transform:translate(-50%,-50%) translateY(0);   } 50% { transform:translate(-50%,-50%) translateY(-12px); } }
+    @keyframes floatLeft   { 0%,100% { transform:translateY(-50%) rotate(-6deg) translateY(0);   } 50% { transform:translateY(-50%) rotate(-6deg) translateY(-10px); } }
+    @keyframes floatRight  { 0%,100% { transform:translateY(-50%) rotate(6deg) translateY(0);    } 50% { transform:translateY(-50%) rotate(6deg) translateY(-10px); } }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav { padding: 14px 20px; }
+      .nav-links { display: none; }
+      .hero { grid-template-columns: 1fr; padding: 100px 20px 60px; gap: 40px; }
+      .hero-visual { height: 360px; order: -1; }
+      .phone-main { width: 150px; height: 325px; }
+      .phone-left, .phone-right { width: 120px; height: 260px; }
+      .stats-inner { grid-template-columns: repeat(2,1fr); padding: 24px 20px; gap: 0; }
+      .stat-item { padding: 16px; border-right: none; border-bottom: 1px solid var(--border); }
+      .stat-item:nth-child(odd) { border-right: 1px solid var(--border); }
+      .stat-item:last-child, .stat-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+      section { padding: 60px 20px; }
+      .pro-inner { grid-template-columns: 1fr; gap: 40px; padding: 60px 20px; }
+      .pro-features { grid-template-columns: 1fr; }
+      footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#"><svg style="height:44px;width:auto;display:block;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1e1b4b;
+      }
+
+      .cls-2 {
+        fill: #1a6bc4;
+      }
+
+      .cls-3 {
+        fill: url(#radial-gradient);
+        stroke-width: 5px;
+      }
+
+      .cls-3, .cls-4 {
+        stroke: #1e1b4b;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke-dasharray: 1.32 .33;
+        stroke-width: 3px;
+      }
+    </style>
+    <radialGradient id="radial-gradient" cx="500.53" cy="499.47" fx="500.53" fy="499.47" r="400.03" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e5e2df"/>
+      <stop offset="0" stop-color="#e6eaed"/>
+      <stop offset="0" stop-color="#e8f4ff"/>
+      <stop offset=".28" stop-color="#e5f2fe"/>
+      <stop offset=".44" stop-color="#ddedfc"/>
+      <stop offset=".58" stop-color="#cfe5f8"/>
+      <stop offset=".7" stop-color="#bbdaf2"/>
+      <stop offset=".81" stop-color="#a1cbeb"/>
+      <stop offset=".9" stop-color="#81b9e3"/>
+      <stop offset="1" stop-color="#5ca3d9"/>
+      <stop offset="1" stop-color="#5ba3d9"/>
+    </radialGradient>
+  </defs>
+  <g id="Badge">
+    <g id="POLYLINE">
+      <path class="cls-3" d="M154.09,699.5c-71.45-123.76-71.45-276.24,0-400C264.55,108.18,509.18,42.63,700.5,153.09s256.87,355.09,146.41,546.41h13.59c22.09,0,40,17.91,40,40v120c0,22.09-17.91,40-40,40H140.5c-22.09,0-40-17.91-40-40v-120c0-22.09,17.91-40,40-40h13.59Z"/>
+    </g>
+  </g>
+  <g id="Cruz">
+    <g id="LINE">
+      <line class="cls-4" x1="500" y1="700" x2="500" y2="100"/>
+    </g>
+    <g id="LINE-2" data-name="LINE">
+      <line class="cls-4" x1="180.16" y1="500" x2="819.84" y2="500"/>
+    </g>
+  </g>
+  <g id="Arco">
+    <g id="POLYLINE-2" data-name="POLYLINE">
+      <path class="cls-1" d="M250.7,699.5c-93.6-116.91-93.6-283.09,0-400,110.46-137.96,311.84-160.26,449.8-49.8,137.96,110.46,160.26,311.84,49.8,449.8h49.53c110.46-165.32,65.98-388.88-99.33-499.33-165.32-110.46-388.88-65.98-499.33,99.33-80.89,121.06-80.89,278.94,0,400h49.53Z"/>
+    </g>
+  </g>
+  <g id="MechRef">
+    <g>
+      <path class="cls-1" d="M142.83,852.04v-103.86h16.46l41.2,62.79,40.29-62.79h16.3v103.86h-18.86v-64.17c0-1.24.07-2.82.21-4.72.14-1.9.32-4.03.54-6.39-1.1,2.69-2.07,4.9-2.9,6.63-.83,1.74-1.57,3.16-2.23,4.27l-32.85,51.88h-4.05l-32.93-52.08c-1.21-1.97-2.25-3.82-3.1-5.55-.86-1.73-1.56-3.42-2.11-5.06.17,2.16.29,4.13.37,5.9.08,1.77.12,3.47.12,5.11v64.17h-16.46Z"/>
+      <path class="cls-1" d="M283.33,852.04v-85.09h76.86v15.03h-59.24v18.57h34.5v14.64h-34.5v20.93h60.15v15.92h-77.77Z"/>
+      <path class="cls-1" d="M438.97,782.57h-47.08v53.16h47.08v-18.08l17.62,4.23v10.02c0,7.73-1.3,13.02-3.89,15.87-2.59,2.85-7.56,4.27-14.89,4.27h-44.76c-7.23,0-12.14-1.41-14.73-4.23-2.59-2.82-3.89-8.12-3.89-15.92v-44.91c0-7.73,1.28-13,3.85-15.82,2.56-2.82,7.49-4.23,14.77-4.23h44.76c7.39,0,12.37,1.41,14.93,4.23,2.56,2.82,3.85,8.09,3.85,15.82v8.25l-17.62,3.05v-15.72Z"/>
+      <path class="cls-1" d="M475.14,852.04v-85.09h17.62v32.33h54.52v-32.33h17.46v85.09h-17.46v-35.87h-54.52v35.87h-17.62Z"/>
+      <path class="cls-2" d="M592.97,852.04v-103.86h74.8c6.95,0,11.98,1.59,15.1,4.77,3.12,3.18,4.67,8.3,4.67,15.38v24.37c0,7.01-1.56,12.12-4.67,15.33-3.12,3.21-8.15,4.82-15.1,4.82h-11.42l40.38,39.21h-29.21l-35.25-39.21h-19.28v39.21h-20.02ZM658.74,766.16h-45.75v28.89h45.75c3.53,0,5.94-.6,7.24-1.82,1.3-1.21,1.94-3.36,1.94-6.44v-12.48c0-3.01-.65-5.12-1.94-6.34-1.3-1.21-3.71-1.82-7.24-1.82Z"/>
+      <path class="cls-2" d="M709.31,852.04v-85.09h76.86v15.03h-59.24v18.57h34.5v14.64h-34.5v20.93h60.15v15.92h-77.77Z"/>
+      <path class="cls-2" d="M802.15,852.04v-85.09h76.04v15.23h-58.41v22.21h31.44v15.82h-31.44v31.84h-17.62Z"/>
+    </g>
+  </g>
+  <g id="M">
+    <path class="cls-1" d="M264.87,646.17v-300.22h67.07l168.26,178.19,167.47-178.19h67.46v300.22h-77.78v-206.62l-153.58,170.57h-16.27l-155.56-165.71v201.77h-67.07Z"/>
+  </g>
+</svg></a>
+  <ul class="nav-links">
+    <li><a href="#modules">Modules</a></li>
+    <li><a href="#pro">Pro</a></li>
+    <li><a href="#screenshots">Screenshots</a></li>
+    <li><a href="https://hr-soft.github.io/mechref-privacy">Privacy</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Engineering Reference</div>
+    <h1>Mech<em>Ref</em></h1>
+    <p class="hero-sub">Mechanical Engineering · At Your Fingertips</p>
+    <p class="hero-desc">Professional mechanical engineering reference and calculator app. Threads, fits, gears, springs, shafts and more — based on international standards. Inspired by the classic reference book <em>Máquinas</em> by A.L. Casillas.</p>
+    <div class="hero-badges">
+      <span class="badge-pill highlight">ISO Standards</span>
+      <span class="badge-pill highlight">One-time purchase</span>
+      <span class="badge-pill">No subscription</span>
+      <span class="badge-pill">No ads</span>
+      <span class="badge-pill">EN · ES</span>
+    </div>
+    <div class="cta-group">
+      <a href="#" class="btn btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        Google Play
+      </a>
+      <a href="#" class="btn btn-secondary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+        Microsoft Store
+      </a>
+    </div>
+    <p class="coming-soon-note">// Store links coming soon</p>
+  </div>
+
+  <div class="hero-visual">
+    <div class="phone-frame phone-left">
+      <img src="screenshots/screen2.png" alt="Threads module"/>
+    </div>
+    <div class="phone-frame phone-main">
+      <img src="screenshots/screen1.png" alt="MechRef home"/>
+    </div>
+    <div class="phone-frame phone-right">
+      <img src="screenshots/screen3.png" alt="Fits and tolerances"/>
+    </div>
+  </div>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-number">11</div><div class="stat-label">Modules</div></div>
+    <div class="stat-item"><div class="stat-number">180+</div><div class="stat-label">Unit Conversions</div></div>
+    <div class="stat-item"><div class="stat-number">65</div><div class="stat-label">Eng. Constants</div></div>
+    <div class="stat-item"><div class="stat-number">2</div><div class="stat-label">Languages</div></div>
+  </div>
+</div>
+
+<section id="modules">
+  <div class="section-label">Modules</div>
+  <h2>What's Inside</h2>
+  <p class="section-intro">Every module is built around real engineering needs, with data and formulas based on international standards.</p>
+  <div class="modules-grid">
+    <div class="module-card"><span class="module-tag tag-free">Free</span><div class="module-name">Threads</div><div class="module-desc">ISO Coarse, ISO Fine, UNC, UNF — with tap drill recommendations for every size.</div></div>
+    <div class="module-card"><span class="module-tag tag-free">Free</span><div class="module-name">Fits & Tolerances</div><div class="module-desc">ISO 286-1 hole basis system with visual tolerance diagrams and fit classifications.</div></div>
+    <div class="module-card"><span class="module-tag tag-free">Free</span><div class="module-name">Converter & Constants</div><div class="module-desc">180+ unit conversions across 14 disciplines, plus 65 engineering and physics constants.</div></div>
+    <div class="module-card"><span class="module-tag tag-free">Free</span><div class="module-name">Areas & Volumes</div><div class="module-desc">2D and 3D geometry calculations for the most common engineering shapes.</div></div>
+    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Geometry & Trig</div><div class="module-desc">Triangle solver, arc & sector, trig functions, and polygon calculations.</div></div>
+    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Gears</div><div class="module-desc">Spur, helical, rack & pinion, bevel gears — ISO modules, pitch, ratios.</div></div>
+    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Springs</div><div class="module-desc">Compression, extension, torsion, and leaf spring design calculations.</div></div>
+    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Shafts & Keys</div><div class="module-desc">Design by torque, bending moment, and keyway selection.</div></div>
+    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Belts & Chains</div><div class="module-desc">V-belt, flat belt, roller chain, timing belt — power and tensions.</div></div>
+    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Machining</div><div class="module-desc">Cutting speed, feed rate, material removal rate, and power calculations.</div></div>
+    <div class="module-card" style="background:repeating-linear-gradient(45deg,var(--bg2),var(--bg2) 10px,var(--surface) 10px,var(--surface) 20px)">
+      <span class="module-tag tag-pro">Pro</span><div class="module-name">More Coming</div><div class="module-desc">More Pro modules are in development and will be available in future updates.</div>
+    </div>
+  </div>
+</section>
+
+<div class="pro-section" id="pro">
+  <div class="pro-inner">
+    <div>
+      <div class="pro-badge">⚡ MechRef Pro</div>
+      <h2>Unlock the Full Toolkit</h2>
+      <p class="section-intro" style="margin-bottom:0">A single one-time purchase gives you access to all Pro modules — current and future — with no recurring fees, no ads, and no account required.</p>
+      <ul class="pro-features">
+        <li>Gears calculator</li>
+        <li>Spring design</li>
+        <li>Shaft & key selection</li>
+        <li>Belt & chain drive</li>
+        <li>Machining parameters</li>
+        <li>Geometry & trig solver</li>
+        <li>All future Pro modules</li>
+        <li>Priority support</li>
+      </ul>
+    </div>
+    <div>
+      <div class="pro-price-box">
+        <div class="price-label">One-time purchase</div>
+        <div class="price-value">Pro</div>
+        <div class="price-note">// No subscription · No ads · No account</div>
+        <ul class="price-perks">
+          <li>Available on Google Play</li>
+          <li>Available on Microsoft Store</li>
+          <li>English &amp; Spanish</li>
+          <li>Works offline</li>
+          <li>All future Pro modules included</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="screenshots">
+  <div class="section-label">Screenshots</div>
+  <h2>See It in Action</h2>
+  <div class="screenshots-scroll">
+    <div class="screenshot-item"><img src="screenshots/screen1.png" alt="Home screen"/></div>
+    <div class="screenshot-item"><img src="screenshots/screen2.png" alt="Threads module"/></div>
+    <div class="screenshot-item"><img src="screenshots/screen3.png" alt="Fits and Tolerances"/></div>
+    <div class="screenshot-item"><img src="screenshots/screen4.png" alt="Areas and Volumes"/></div>
+    <div class="screenshot-item"><img src="screenshots/screen5.png" alt="Converter and Constants"/></div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><span>Mech</span>Ref</div>
+  <ul class="footer-links">
+    <li><a href="#modules">Modules</a></li>
+    <li><a href="#pro">Pro</a></li>
+    <li><a href="https://hr-soft.github.io/mechref-privacy">Privacy Policy</a></li>
+    <li><a href="mailto:hr1625@gmail.com">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2025 HRSoftware · All rights reserved</div>
+</footer>
+
+</body>
+</html>
