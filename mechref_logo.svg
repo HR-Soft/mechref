@@ -26,7 +26,7 @@
       .cls-3 {
         stroke: #84cc16;
         stroke-dasharray: 1.65 .41;
-        stroke-width: 4px;
+        stroke-width: 5px;
       }
 
       .cls-3, .cls-4 {
@@ -56,10 +56,10 @@
   </g>
   <g id="CRUZ">
     <g id="LINE">
-      <line class="cls-3" x1="500" y1="2" x2="500" y2="998"/>
+      <line class="cls-3" x1="500" y1="2.5" x2="500" y2="997.5"/>
     </g>
     <g id="LINE-2" data-name="LINE">
-      <line class="cls-3" x1="2" y1="500" x2="998" y2="500"/>
+      <line class="cls-3" x1="2.5" y1="500" x2="997.5" y2="500"/>
     </g>
   </g>
   <g id="CIRCULO">
