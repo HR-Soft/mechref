@@ -23,10 +23,6 @@
         fill: url(#radial-gradient);
       }
 
-      .cls-6 {
-        opacity: .8;
-      }
-
       .cls-3 {
         stroke: #84cc16;
         stroke-dasharray: 1.65 .41;
@@ -59,11 +55,11 @@
     </g>
   </g>
   <g id="CRUZ">
-    <g id="LINE" class="cls-6">
-      <line class="cls-3" x1="500" x2="500" y2="1000"/>
+    <g id="LINE">
+      <line class="cls-3" x1="500" y1="2" x2="500" y2="998"/>
     </g>
-    <g id="LINE-2" data-name="LINE" class="cls-6">
-      <line class="cls-3" y1="500" x2="1000" y2="500"/>
+    <g id="LINE-2" data-name="LINE">
+      <line class="cls-3" x1="2" y1="500" x2="998" y2="500"/>
     </g>
   </g>
   <g id="CIRCULO">
