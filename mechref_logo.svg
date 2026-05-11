@@ -1,40 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+<svg id="M" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
   <defs>
     <style>
       .cls-1 {
         stroke: #fff;
+        stroke-width: .71px;
       }
 
       .cls-1, .cls-2 {
         fill: #fff;
       }
 
-      .cls-1, .cls-3, .cls-4 {
+      .cls-1, .cls-3 {
         stroke-linecap: round;
         stroke-linejoin: round;
       }
 
-      .cls-1, .cls-4 {
-        stroke-width: .71px;
-      }
-
-      .cls-5 {
+      .cls-4 {
         fill: url(#radial-gradient);
       }
 
       .cls-3 {
+        fill: none;
         stroke: #84cc16;
         stroke-dasharray: 1.65 .41;
-        stroke-width: 5px;
-      }
-
-      .cls-3, .cls-4 {
-        fill: none;
-      }
-
-      .cls-4 {
-        stroke: #000;
+        stroke-width: 6px;
       }
     </style>
     <radialGradient id="radial-gradient" cx="500" cy="500" fx="500" fy="500" r="500" gradientUnits="userSpaceOnUse">
@@ -48,29 +38,23 @@
       <stop offset=".95" stop-color="#0c1221"/>
       <stop offset="1" stop-color="#0a0f1e"/>
     </radialGradient>
+    <symbol id="New_Symbol" data-name="New Symbol" viewBox="0 0 1000 1000">
+      <g>
+        <g id="CIRCLE">
+          <circle class="cls-4" cx="500" cy="500" r="500"/>
+        </g>
+        <g id="LINE">
+          <line class="cls-3" x1="500" y1="3" x2="500" y2="997"/>
+        </g>
+        <g id="LINE-2" data-name="LINE">
+          <line class="cls-3" x1="3" y1="500" x2="997" y2="500"/>
+        </g>
+        <path class="cls-1" d="M500,50c-248.53,0-450,201.47-450,450s201.47,450,450,450,450-201.47,450-450S748.53,50,500,50ZM500,900c-220.91,0-400-179.09-400-400S279.09,100,500,100s400,179.09,400,400-179.09,400-400,400Z"/>
+        <g id="POLYLINE">
+          <polygon class="cls-2" points="200 680 200 320 300 320 500 520 700 320 800 320 800 680 700 680 700 447.28 510 637.28 490 637.28 300 447.28 300 680 200 680"/>
+        </g>
+      </g>
+    </symbol>
   </defs>
-  <g id="BADGE">
-    <g id="CIRCLE">
-      <circle class="cls-5" cx="500" cy="500" r="500"/>
-    </g>
-  </g>
-  <g id="CRUZ">
-    <g id="LINE">
-      <line class="cls-3" x1="500" y1="2.5" x2="500" y2="997.5"/>
-    </g>
-    <g id="LINE-2" data-name="LINE">
-      <line class="cls-3" x1="2.5" y1="500" x2="997.5" y2="500"/>
-    </g>
-  </g>
-  <g id="CIRCULO">
-    <g id="ARC">
-      <path class="cls-4" d="M499.15,1000c.57,0,1.13,0,1.7,0"/>
-    </g>
-    <path class="cls-1" d="M500,50c-248.53,0-450,201.47-450,450s201.47,450,450,450,450-201.47,450-450S748.53,50,500,50ZM500,900c-220.91,0-400-179.09-400-400S279.09,100,500,100s400,179.09,400,400-179.09,400-400,400Z"/>
-  </g>
-  <g id="M">
-    <g id="POLYLINE">
-      <polygon class="cls-2" points="200 680 200 320 300 320 500 520 700 320 800 320 800 680 700 680 700 447.28 510 637.28 490 637.28 300 447.28 300 680 200 680"/>
-    </g>
-  </g>
+  <use width="1000" height="1000" transform="translate(0 .18)" xlink:href="#New_Symbol"/>
 </svg>
