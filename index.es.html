@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MechRef — Mechanical Engineering Reference</title>
-  <meta name="description" content="Professional mechanical engineering reference and calculator app. Threads, fits, gears, springs, shafts and more. Based on international standards."/>
-  <link rel="canonical" href="https://hrsoftware.ar/mechref/"/>
+  <title>MechRef — Referencia de Ingeniería Mecánica</title>
+  <meta name="description" content="App profesional de referencia y cálculo de ingeniería mecánica. Roscas, ajustes, engranajes, muelles, ejes y más. Basada en normas internacionales."/>
+  <link rel="canonical" href="https://hrsoftware.ar/mechref/index.es.html"/>
   <link rel="alternate" hreflang="en" href="https://hrsoftware.ar/mechref/"/>
   <link rel="alternate" hreflang="es" href="https://hrsoftware.ar/mechref/index.es.html"/>
   <link rel="alternate" hreflang="x-default" href="https://hrsoftware.ar/mechref/"/>
@@ -73,7 +73,7 @@
       text-decoration: none;
     }
     .nav-logo span { color: var(--green-bright); }
-    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
     .nav-links a {
       font-family: var(--mono);
       font-size: 11px;
@@ -84,7 +84,6 @@
       transition: color 0.2s;
     }
     .nav-links a:hover, .nav-links a.active { color: var(--green-bright); }
-    .nav-links { align-items: center; }
     .lang-switch { display: flex; gap: 6px; align-items: center; }
     .lang-switch span { color: var(--text-dim); font-family: var(--mono); font-size: 11px; }
 
@@ -183,9 +182,6 @@
     }
     .btn-primary { background: var(--green-bright); color: #050805; }
     .btn-primary:hover { background: var(--green-glow); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(77,201,98,0.25); }
-    .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
-    .btn-secondary:hover { border-color: var(--green); color: var(--green-bright); }
-    .coming-soon-note { font-family: var(--mono); font-size: 10px; color: var(--text-dim); letter-spacing: 0.08em; margin-top: 12px; }
 
     /* HERO VISUAL */
     .hero-visual {
@@ -383,7 +379,7 @@
     }
     .footer-logo { font-family: var(--condensed); font-size: 18px; font-weight: 700; letter-spacing: 0.08em; color: var(--heading); }
     .footer-logo span { color: var(--green-bright); }
-    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
     .footer-links a { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: var(--green-bright); }
     .footer-copy { font-family: var(--mono); font-size: 10px; color: var(--text-dim); letter-spacing: 0.06em; }
@@ -417,26 +413,26 @@
 <body>
 
 <nav>
-  <a class="nav-logo" href="#"><img src="mechref_logo.svg" alt="MechRef" style="height:44px;width:auto;display:block;"/></a>
+  <a class="nav-logo" href="index.es.html"><img src="mechref_logo.svg" alt="MechRef" style="height:44px;width:auto;display:block;"/></a>
   <ul class="nav-links">
-    <li><a href="#modules">Modules</a></li>
-    <li><a href="modules.html">Module Guide</a></li>
+    <li><a href="#modules">Módulos</a></li>
+    <li><a href="modules.es.html">Guía de Módulos</a></li>
     <li><a href="#pro">Pro</a></li>
-    <li class="lang-switch"><a href="index.html" class="active">EN</a><span>·</span><a href="index.es.html">ES</a></li>
+    <li class="lang-switch"><a href="index.html">EN</a><span>·</span><a href="index.es.html" class="active">ES</a></li>
   </ul>
 </nav>
 
 <div class="hero">
   <div class="hero-content">
-    <div class="hero-eyebrow">Engineering Reference</div>
+    <div class="hero-eyebrow">Referencia de Ingeniería</div>
     <h1>Mech<em>Ref</em></h1>
-    <p class="hero-sub">Mechanical Engineering · At Your Fingertips</p>
-    <p class="hero-desc">Professional mechanical engineering reference and calculator app. Threads, fits, gears, springs, shafts and more — based on international standards. Inspired by the classic reference book <em>Máquinas</em> by A.L. Casillas.</p>
+    <p class="hero-sub">Ingeniería Mecánica · Al Alcance de Tu Mano</p>
+    <p class="hero-desc">App profesional de referencia y cálculo de ingeniería mecánica. Roscas, ajustes, engranajes, muelles, ejes y más, basada en normas internacionales. Inspirada en el clásico libro de referencia <em>Máquinas</em> de A.L. Casillas.</p>
     <div class="hero-badges">
-      <span class="badge-pill highlight">ISO Standards</span>
-      <span class="badge-pill highlight">One-time purchase</span>
-      <span class="badge-pill">No subscription</span>
-      <span class="badge-pill">No ads</span>
+      <span class="badge-pill highlight">Normas ISO</span>
+      <span class="badge-pill highlight">Compra única</span>
+      <span class="badge-pill">Sin suscripción</span>
+      <span class="badge-pill">Sin anuncios</span>
       <span class="badge-pill">EN · ES</span>
     </div>
     <div class="cta-group">
@@ -453,48 +449,48 @@
 
   <div class="hero-visual">
     <div class="phone-frame phone-left">
-      <img src="screenshots/screen2.png" alt="Threads module"/>
+      <img src="screenshots/screen2.png" alt="Módulo Roscas"/>
     </div>
     <div class="phone-frame phone-main">
-      <img src="screenshots/screen1.png" alt="MechRef home"/>
+      <img src="screenshots/screen1.png" alt="Inicio de MechRef"/>
     </div>
     <div class="phone-frame phone-right">
-      <img src="screenshots/screen3.png" alt="Fits and tolerances"/>
+      <img src="screenshots/screen3.png" alt="Ajustes y tolerancias"/>
     </div>
   </div>
 </div>
 
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat-item"><div class="stat-number">11</div><div class="stat-label">Modules</div></div>
-    <div class="stat-item"><div class="stat-number">180+</div><div class="stat-label">Unit Conversions</div></div>
-    <div class="stat-item"><div class="stat-number">65</div><div class="stat-label">Eng. Constants</div></div>
-    <div class="stat-item"><div class="stat-number">2</div><div class="stat-label">Languages</div></div>
+    <div class="stat-item"><div class="stat-number">11</div><div class="stat-label">Módulos</div></div>
+    <div class="stat-item"><div class="stat-number">180+</div><div class="stat-label">Conversiones</div></div>
+    <div class="stat-item"><div class="stat-number">65</div><div class="stat-label">Constantes ing.</div></div>
+    <div class="stat-item"><div class="stat-number">2</div><div class="stat-label">Idiomas</div></div>
   </div>
 </div>
 
 <section id="modules">
-  <div class="section-label">Modules</div>
-  <h2>What's Inside</h2>
-  <p class="section-intro">Every module is built around real engineering needs, with data and formulas based on international standards.</p>
+  <div class="section-label">Módulos</div>
+  <h2>Qué Incluye</h2>
+  <p class="section-intro">Cada módulo responde a necesidades reales de ingeniería, con datos y fórmulas basados en normas internacionales.</p>
   <div class="modules-grid">
-    <div class="module-card"><span class="module-tag tag-free">Free</span><div class="module-name">Threads</div><div class="module-desc">ISO Coarse, ISO Fine, UNC, UNF — with tap drill recommendations for every size.</div></div>
-    <div class="module-card"><span class="module-tag tag-free">Free</span><div class="module-name">Fits & Tolerances</div><div class="module-desc">ISO 286-1 hole basis system with visual tolerance diagrams and fit classifications.</div></div>
-    <div class="module-card"><span class="module-tag tag-free">Free</span><div class="module-name">Converter & Constants</div><div class="module-desc">180+ unit conversions across 14 disciplines, plus 65 engineering and physics constants.</div></div>
-    <div class="module-card"><span class="module-tag tag-free">Free</span><div class="module-name">Areas & Volumes</div><div class="module-desc">2D and 3D geometry calculations for the most common engineering shapes.</div></div>
-    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Geometry & Trig</div><div class="module-desc">Triangle solver, arc & sector, trig functions, and polygon calculations.</div></div>
-    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Gears</div><div class="module-desc">Spur, helical, rack & pinion, bevel gears — ISO modules, pitch, ratios.</div></div>
-    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Springs</div><div class="module-desc">Compression, extension, torsion, and leaf spring design calculations.</div></div>
-    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Shafts & Keys</div><div class="module-desc">Design by torque, bending moment, and keyway selection.</div></div>
-    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Belts & Chains</div><div class="module-desc">V-belt, flat belt, roller chain, timing belt — power and tensions.</div></div>
-    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Machining</div><div class="module-desc">Cutting speed, feed rate, material removal rate, and power calculations.</div></div>
+    <div class="module-card"><span class="module-tag tag-free">Gratis</span><div class="module-name">Roscas</div><div class="module-desc">ISO Coarse, ISO Fine, UNC, UNF — con broca de macho recomendada para cada medida.</div></div>
+    <div class="module-card"><span class="module-tag tag-free">Gratis</span><div class="module-name">Ajustes y Tolerancias</div><div class="module-desc">Sistema de agujero base ISO 286-1 con diagramas de tolerancia y clasificación de ajustes.</div></div>
+    <div class="module-card"><span class="module-tag tag-free">Gratis</span><div class="module-name">Convertidor y Constantes</div><div class="module-desc">Más de 180 conversiones en 14 disciplinas, más 65 constantes de ingeniería y física.</div></div>
+    <div class="module-card"><span class="module-tag tag-free">Gratis</span><div class="module-name">Áreas y Volúmenes</div><div class="module-desc">Cálculos de geometría 2D y 3D para las figuras más comunes en ingeniería.</div></div>
+    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Geometría y Trig.</div><div class="module-desc">Resolutor de triángulos, arco y sector, funciones trig. y polígonos.</div></div>
+    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Engranajes</div><div class="module-desc">Recto, helicoidal, piñón-cremallera, cónico — módulos ISO, paso, relaciones.</div></div>
+    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Muelles</div><div class="module-desc">Cálculos de diseño de muelles de compresión, extensión, torsión y lámina.</div></div>
+    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Ejes y Chavetas</div><div class="module-desc">Diseño por torsión, momento flector y selección de chaveteros.</div></div>
+    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Correas y Cadenas</div><div class="module-desc">Correa V, correa plana, cadena de rodillos, correa dentada — potencia y tensiones.</div></div>
+    <div class="module-card"><span class="module-tag tag-pro">Pro</span><div class="module-name">Mecanizado</div><div class="module-desc">Velocidad de corte, avance, tasa de arranque de material y potencia.</div></div>
     <div class="module-card" style="background:repeating-linear-gradient(45deg,var(--bg2),var(--bg2) 10px,var(--surface) 10px,var(--surface) 20px)">
-      <span class="module-tag tag-pro">Pro</span><div class="module-name">More Coming</div><div class="module-desc">More Pro modules are in development and will be available in future updates.</div>
+      <span class="module-tag tag-pro">Pro</span><div class="module-name">Más en Camino</div><div class="module-desc">Hay más módulos Pro en desarrollo que llegarán en futuras actualizaciones.</div>
     </div>
   </div>
   <div style="text-align:center;margin-top:56px;">
-    <a href="modules.html" class="btn btn-primary">Explore the Full Module Guide →</a>
-    <p style="font-family:var(--mono);font-size:11px;color:var(--text-dim);letter-spacing:0.06em;margin-top:14px;">// every module · a worked example · exactly what Pro unlocks</p>
+    <a href="modules.es.html" class="btn btn-primary">Explora la Guía Completa de Módulos →</a>
+    <p style="font-family:var(--mono);font-size:11px;color:var(--text-dim);letter-spacing:0.06em;margin-top:14px;">// cada módulo · un ejemplo resuelto · exactamente qué desbloquea Pro</p>
   </div>
 </section>
 
@@ -502,30 +498,30 @@
   <div class="pro-inner">
     <div>
       <div class="pro-badge">⚡ MechRef Pro</div>
-      <h2>Unlock the Full Toolkit</h2>
-      <p class="section-intro" style="margin-bottom:0">A single one-time purchase gives you access to all Pro modules — current and future — with no recurring fees, no ads, and no account required.</p>
+      <h2>Desbloquea el Kit Completo</h2>
+      <p class="section-intro" style="margin-bottom:0">Una única compra te da acceso a todos los módulos Pro —actuales y futuros— sin cuotas recurrentes, sin anuncios y sin necesidad de cuenta.</p>
       <ul class="pro-features">
-        <li>Gears calculator</li>
-        <li>Spring design</li>
-        <li>Shaft & key selection</li>
-        <li>Belt & chain drive</li>
-        <li>Machining parameters</li>
-        <li>Geometry & trig solver</li>
-        <li>All future Pro modules</li>
-        <li>Priority support</li>
+        <li>Calculadora de engranajes</li>
+        <li>Diseño de muelles</li>
+        <li>Selección de ejes y chavetas</li>
+        <li>Transmisión por correa y cadena</li>
+        <li>Parámetros de mecanizado</li>
+        <li>Resolutor de geometría y trig.</li>
+        <li>Todos los módulos Pro futuros</li>
+        <li>Soporte prioritario</li>
       </ul>
     </div>
     <div>
       <div class="pro-price-box">
-        <div class="price-label">One-time purchase</div>
+        <div class="price-label">Compra única</div>
         <div class="price-value">Pro</div>
-        <div class="price-note">// No subscription · No ads · No account</div>
+        <div class="price-note">// Sin suscripción · Sin anuncios · Sin cuenta</div>
         <ul class="price-perks">
-          <li>Available on Google Play</li>
-          <li>Available on Microsoft Store</li>
-          <li>English &amp; Spanish</li>
-          <li>Works offline</li>
-          <li>All future Pro modules included</li>
+          <li>Disponible en Google Play</li>
+          <li>Disponible en Microsoft Store</li>
+          <li>Español e inglés</li>
+          <li>Funciona sin conexión</li>
+          <li>Todos los módulos Pro futuros incluidos</li>
         </ul>
       </div>
     </div>
@@ -533,27 +529,27 @@
 </div>
 
 <section id="screenshots">
-  <div class="section-label">Screenshots</div>
-  <h2>See It in Action</h2>
+  <div class="section-label">Capturas</div>
+  <h2>Míralo en Acción</h2>
   <div class="screenshots-scroll">
-    <div class="screenshot-item"><img src="screenshots/screen1.png" alt="Home screen"/></div>
-    <div class="screenshot-item"><img src="screenshots/screen2.png" alt="Threads module"/></div>
-    <div class="screenshot-item"><img src="screenshots/screen3.png" alt="Fits and Tolerances"/></div>
-    <div class="screenshot-item"><img src="screenshots/screen4.png" alt="Areas and Volumes"/></div>
-    <div class="screenshot-item"><img src="screenshots/screen5.png" alt="Converter and Constants"/></div>
+    <div class="screenshot-item"><img src="screenshots/screen1.png" alt="Pantalla de inicio"/></div>
+    <div class="screenshot-item"><img src="screenshots/screen2.png" alt="Módulo Roscas"/></div>
+    <div class="screenshot-item"><img src="screenshots/screen3.png" alt="Ajustes y Tolerancias"/></div>
+    <div class="screenshot-item"><img src="screenshots/screen4.png" alt="Áreas y Volúmenes"/></div>
+    <div class="screenshot-item"><img src="screenshots/screen5.png" alt="Convertidor y Constantes"/></div>
   </div>
 </section>
 
 <footer>
   <div class="footer-logo"><span>Mech</span>Ref</div>
   <ul class="footer-links">
-    <li><a href="#modules">Modules</a></li>
+    <li><a href="#modules">Módulos</a></li>
     <li><a href="#pro">Pro</a></li>
-    <li><a href="index.es.html">Español</a></li>
-    <li><a href="https://hr-soft.github.io/mechref-privacy">Privacy Policy</a></li>
-    <li><a href="mailto:support@hrsoftware.ar">Contact</a></li>
+    <li><a href="index.html">English</a></li>
+    <li><a href="https://hr-soft.github.io/mechref-privacy">Política de privacidad</a></li>
+    <li><a href="mailto:support@hrsoftware.ar">Contacto</a></li>
   </ul>
-  <div class="footer-copy">© 2025 HRSoftware · All rights reserved</div>
+  <div class="footer-copy">© 2025 HRSoftware · Todos los derechos reservados</div>
 </footer>
 
 </body>
