@@ -4,7 +4,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MechRef — Mechanical Engineering Reference</title>
-  <meta name="description" content="Professional mechanical engineering reference and calculator app. Threads, fits, gears, springs, shafts and more. Based on international standards."/>
+  <meta name="description" content="Professional mechanical engineering reference and calculator app. Threads, fits, gears, springs, shafts and more. Based on international standards. Try Pro free for 7 days."/>
   <link rel="canonical" href="https://hrsoftware.ar/mechref/"/>
   <link rel="alternate" hreflang="en" href="https://hrsoftware.ar/mechref/"/>
   <link rel="alternate" hreflang="es" href="https://hrsoftware.ar/mechref/index.es.html"/>
@@ -342,6 +342,17 @@
     .pro-features li { font-size: 13px; color: var(--text); display: flex; align-items: center; gap: 10px; }
     .pro-features li::before { content: '→'; color: var(--amber); font-family: var(--mono); font-size: 12px; flex-shrink: 0; }
     .pro-price-box { background: var(--bg); border: 1px solid var(--border); padding: 40px; text-align: center; }
+    .trial-flag {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--amber);
+      background: rgba(212,130,10,0.10);
+      border: 1px solid rgba(212,130,10,0.3);
+      padding: 8px 12px;
+      margin-bottom: 24px;
+    }
     .price-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 16px; }
     .price-value { font-family: var(--condensed); font-size: 64px; font-weight: 700; color: var(--heading); line-height: 1; margin-bottom: 8px; }
     .price-note { font-family: var(--mono); font-size: 11px; color: var(--green-bright); letter-spacing: 0.08em; margin-bottom: 32px; }
@@ -434,6 +445,7 @@
     <p class="hero-desc">Professional mechanical engineering reference and calculator app. Threads, fits, gears, springs, shafts and more — based on international standards. Inspired by the classic reference book <em>Máquinas</em> by A.L. Casillas.</p>
     <div class="hero-badges">
       <span class="badge-pill highlight">ISO Standards</span>
+      <span class="badge-pill highlight">7-day free Pro trial</span>
       <span class="badge-pill highlight">One-time purchase</span>
       <span class="badge-pill">No subscription</span>
       <span class="badge-pill">No ads</span>
@@ -503,7 +515,7 @@
     <div>
       <div class="pro-badge">⚡ MechRef Pro</div>
       <h2>Unlock the Full Toolkit</h2>
-      <p class="section-intro" style="margin-bottom:0">A single one-time purchase gives you access to all Pro modules — current and future — with no recurring fees, no ads, and no account required.</p>
+      <p class="section-intro" style="margin-bottom:0">Try every Pro module free for 7 days — start the trial inside the app, no payment and no card. After that, a single one-time purchase gives you access to all Pro modules — current and future — with no recurring fees, no ads, and no account required.</p>
       <ul class="pro-features">
         <li>Gears calculator</li>
         <li>Spring design</li>
@@ -517,10 +529,12 @@
     </div>
     <div>
       <div class="pro-price-box">
-        <div class="price-label">One-time purchase</div>
+        <div class="trial-flag">Free 7-day trial · No card</div>
+        <div class="price-label">Then a one-time purchase</div>
         <div class="price-value">Pro</div>
         <div class="price-note">// No subscription · No ads · No account</div>
         <ul class="price-perks">
+          <li>7 days free, nothing charged when it ends</li>
           <li>Available on Google Play</li>
           <li>Available on Microsoft Store</li>
           <li>English &amp; Spanish</li>
