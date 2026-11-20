@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MechRef — Términos del Servicio</title>
+  <meta name="description" content="Términos del Servicio de MechRef, la app de referencia de ingeniería mecánica de HRSoftware: licencia, descargo técnico, compras y reembolsos, y ley aplicable."/>
+  <link rel="canonical" href="https://hrsoftware.ar/mechref/terms.es.html"/>
+  <link rel="alternate" hreflang="en" href="https://hrsoftware.ar/mechref/terms.html"/>
+  <link rel="alternate" hreflang="es" href="https://hrsoftware.ar/mechref/terms.es.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://hrsoftware.ar/mechref/terms.html"/>
+  <link rel="icon" type="image/svg+xml" href="mechref_logo.svg"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;600;700&family=Barlow:wght@300;400;500&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #0a0c0a;
+      --surface: #141814;
+      --border: #1e241e;
+      --green: #2d7a3a;
+      --green-bright: #3daa50;
+      --amber: #d4820a;
+      --text: #b8c4b8;
+      --text-dim: #4a584a;
+      --heading: #e8f0e8;
+      --condensed: 'Barlow Condensed', sans-serif;
+      --body: 'Barlow', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--body);
+      font-weight: 300;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    /* NOISE — same texture as the landing pages */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.025;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    /* NAV — scoped to .site-nav on purpose (see modules.html) */
+    nav.site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+      border-bottom: 1px solid var(--border);
+      background: rgba(10,12,10,0.85);
+      backdrop-filter: blur(12px);
+    }
+    .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--green-bright); }
+    .lang-switch { display: flex; gap: 6px; align-items: center; }
+    .lang-switch span { color: var(--text-dim); font-family: var(--mono); font-size: 11px; }
+
+    /* PAGE */
+    .wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 140px 24px 80px;
+    }
+
+    header.doc {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 32px;
+      margin-bottom: 48px;
+    }
+    .eyebrow {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--green-bright); }
+    h1 {
+      font-family: var(--condensed);
+      font-size: clamp(38px, 6vw, 60px);
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: var(--heading);
+    }
+    h1 em { font-style: normal; color: var(--green-bright); }
+    .meta {
+      margin-top: 18px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--text-dim);
+    }
+
+    section { margin-bottom: 40px; }
+    h2 {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--green-bright);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2::before { content: ''; width: 18px; height: 1px; background: var(--green-bright); flex-shrink: 0; }
+    p { font-size: 15px; margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+    ul.plain { list-style: none; margin: 4px 0 12px; }
+    ul.plain li {
+      font-size: 15px;
+      padding-left: 22px;
+      position: relative;
+      margin-bottom: 7px;
+    }
+    ul.plain li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+    strong { color: var(--heading); font-weight: 500; }
+    a.inline { color: var(--green-bright); text-decoration: none; border-bottom: 1px solid rgba(61,170,80,0.35); }
+    a.inline:hover { border-color: var(--green-bright); }
+
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--amber);
+      padding: 18px 22px;
+      margin: 16px 0;
+    }
+    .callout p { font-size: 14px; margin: 0; }
+
+    /* FOOTER */
+    footer {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+    .footer-links { display: flex; gap: 20px; list-style: none; flex-wrap: wrap; }
+    .footer-links a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--green-bright); }
+
+    @media (max-width: 640px) {
+      nav.site-nav { padding: 12px 16px; gap: 12px; }
+      .nav-links { gap: 16px; }
+      .wrapper { padding: 120px 18px 60px; }
+      footer { flex-direction: column; padding: 28px 18px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a class="nav-logo" href="index.es.html"><img src="mechref_logo.svg" alt="MechRef" style="height:40px;width:auto;display:block;"/></a>
+  <ul class="nav-links">
+    <li><a href="index.es.html">Inicio</a></li>
+    <li><a href="modules.es.html">Guía de módulos</a></li>
+    <li class="lang-switch"><a href="terms.html">EN</a><span>·</span><a href="terms.es.html" class="active">ES</a></li>
+  </ul>
+</nav>
+
+<div class="wrapper">
+
+  <header class="doc">
+    <div class="eyebrow">Documento legal</div>
+    <h1>Términos del<br/><em>Servicio</em></h1>
+    <p class="meta">Última actualización: 19 de noviembre de 2026 &nbsp;·&nbsp; MechRef de HRSoftware</p>
+  </header>
+
+  <section>
+    <h2>1. Quiénes somos</h2>
+    <p><strong>MechRef</strong> ("la App") es desarrollada y publicada por <strong>Henry José Ríos Hernández</strong>, bajo el nombre comercial <strong>HRSoftware</strong>, con domicilio en San Luis, Argentina ("nosotros"). Podés escribirnos a <a class="inline" href="mailto:support@hrsoftware.ar">support@hrsoftware.ar</a>.</p>
+    <p>Estos Términos del Servicio ("Términos") regulan el uso de la App en todas las plataformas donde la distribuimos, hoy Google Play (Android) y la Microsoft Store (Windows). Al instalar o usar la App, aceptás estos Términos. Si no los aceptás, no uses la App.</p>
+  </section>
+
+  <section>
+    <h2>2. Licencia de uso</h2>
+    <p>Te otorgamos una <strong>licencia personal, no exclusiva, intransferible y revocable</strong> para instalar y usar la App en dispositivos de tu propiedad o bajo tu control, con fines profesionales, académicos o personales. La App se licencia, no se vende.</p>
+    <p>No podés:</p>
+    <ul class="plain">
+      <li>Redistribuir, revender, alquilar, prestar, sublicenciar ni publicar la App o cualquier parte de su contenido;</li>
+      <li>Copiar, extraer o republicar sus tablas, conjuntos de datos o resultados de cálculo como producto o base de datos competidora;</li>
+      <li>Descompilar, desensamblar ni aplicar ingeniería inversa a la App, ni intentar obtener su código fuente, salvo en la medida en que la ley aplicable lo permita expresamente pese a esta restricción;</li>
+      <li>Modificar la App, ni eludir o alterar los controles de licencia que separan las funciones gratuitas de las Pro.</li>
+    </ul>
+    <p>Comprar Pro no te transfiere la propiedad de la App ni de su contenido.</p>
+  </section>
+
+  <section>
+    <h2>3. Funciones gratuitas, Pro y prueba gratuita</h2>
+    <p>La App ofrece un conjunto de módulos gratuitos y una mejora <strong>Pro</strong> que desbloquea los módulos y funciones restantes. Pro es una <strong>compra única</strong>: no hay suscripción ni cobros recurrentes.</p>
+    <p>La App también ofrece una <strong>prueba gratuita de 7 días</strong> de Pro. La prueba la activás vos desde la App, está disponible <strong>una vez por instalación</strong> y no requiere pago ni medio de pago. Al terminar, las funciones Pro se vuelven a bloquear y <strong>no se cobra nada</strong>. Reinstalar la App o borrar sus datos puede habilitar la prueba de nuevo; no lo consideramos un derecho y podemos modificarla o retirarla en versiones futuras.</p>
+    <p>Con el tiempo podemos agregar, cambiar o quitar funciones y módulos, incluidos los que hoy forman parte de Pro, a medida que la App evoluciona.</p>
+  </section>
+
+  <section>
+    <h2>4. Compras, facturación y reembolsos</h2>
+    <p>Todos los pagos los procesa la tienda desde la que instalaste la App: <strong>Google Play</strong> o la <strong>Microsoft Store</strong>. Nunca recibimos ni almacenamos los datos de tu medio de pago.</p>
+    <p>Como la tienda es la vendedora, <strong>las compras y los reembolsos se rigen por los términos y la política de reembolsos de esa tienda</strong>, y los pedidos de reembolso se hacen ante ella:</p>
+    <ul class="plain">
+      <li>Android: Términos de Servicio de Google Play y su política de reembolsos;</li>
+      <li>Windows: Términos de Venta de la Microsoft Store y la política de reembolsos de Microsoft.</li>
+    </ul>
+    <p>Tu acceso a Pro queda asociado a la cuenta de la tienda con la que compraste y podés restaurarlo en tus dispositivos desde esa cuenta. Si una compra se reembolsa, se revoca o se desconoce, el acceso a Pro correspondiente finaliza.</p>
+    <p>Si algo sale mal con una compra, escribinos a <a class="inline" href="mailto:support@hrsoftware.ar">support@hrsoftware.ar</a>: te vamos a ayudar en lo que podamos, aunque la decisión sobre el reembolso sea de la tienda.</p>
+  </section>
+
+  <section>
+    <h2>5. Descargo técnico — leelo, por favor</h2>
+    <p>MechRef es una <strong>herramienta de referencia y cálculo</strong>. Sus tablas, fórmulas y resultados se ofrecen a título informativo y por comodidad, y provienen de normas publicadas y de la literatura de ingeniería.</p>
+    <div class="callout">
+      <p>La App <strong>no</strong> reemplaza a las normas aplicables, a los datos del fabricante ni al criterio de un profesional calificado. Antes de usar cualquier valor o resultado para diseño, fabricación, compras, seguridad o certificación, <strong>verificalo contra la norma vigente y con tu propio criterio profesional</strong>. Cada decisión que tomes con esos datos sigue siendo tu responsabilidad.</p>
+    </div>
+    <p>Las normas se revisan con el tiempo, los errores de carga de datos existen y ninguna herramienta de cálculo puede conocer el contexto de tu aplicación. No afirmamos que el contenido de la App sea completo, esté actualizado ni sea apto para un proyecto en particular.</p>
+  </section>
+
+  <section>
+    <h2>6. Ausencia de garantías</h2>
+    <p>La App se proporciona <strong>"tal cual" y "según disponibilidad"</strong>, sin garantías de ningún tipo, expresas o implícitas, incluidas las de comerciabilidad, aptitud para un fin determinado, exactitud o no infracción. No garantizamos que la App funcione sin interrupciones ni errores, ni que sea compatible con todos los dispositivos.</p>
+  </section>
+
+  <section>
+    <h2>7. Limitación de responsabilidad</h2>
+    <p>En la máxima medida permitida por la ley, no respondemos por daños indirectos, incidentales, especiales o consecuentes, ni por lucro cesante o pérdida de datos, producción, contratos o reputación, derivados del uso de la App, incluidas las pérdidas originadas en un resultado tomado de la App y aplicado sin verificación independiente.</p>
+    <p>Cuando la responsabilidad no pueda excluirse, nuestra responsabilidad total se limita al importe que efectivamente hayas pagado por la App en los doce meses anteriores al hecho que motiva el reclamo.</p>
+    <div class="callout">
+      <p>Nada en estos Términos excluye ni limita los derechos irrenunciables que te reconozca la legislación de defensa del consumidor de tu país de residencia, incluida, en Argentina, la Ley 24.240 de Defensa del Consumidor. Esos derechos se aplican más allá de lo dicho arriba.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>8. Propiedad intelectual</h2>
+    <p>La App, su código fuente, su interfaz, diagramas, iconos, conjuntos de datos curados, textos y los nombres y logotipos <strong>MechRef</strong> y <strong>HRSoftware</strong> son de nuestra propiedad y están protegidos por la legislación argentina e internacional de propiedad intelectual. Nos reservamos todos los derechos no otorgados expresamente en el punto 2.</p>
+    <p>Las normas técnicas citadas en la App (ISO, ASME, DIN, BS y otras) pertenecen a sus respectivos organismos de normalización. MechRef es un producto independiente y no está avalado, afiliado ni certificado por ninguno de ellos, ni por Google o Microsoft.</p>
+    <p>Los resultados que obtengas con la App son tuyos y podés usarlos en tus trabajos y documentos.</p>
+  </section>
+
+  <section>
+    <h2>9. Uso aceptable</h2>
+    <p>Usá la App conforme a la ley. No la uses de un modo que vulnere derechos de terceros, infrinja normas de exportación o sanciones aplicables, o interfiera con la seguridad de la App o con las tiendas que la distribuyen.</p>
+    <p>La App es una herramienta de ingeniería para público general y no está dirigida a menores de 13 años.</p>
+  </section>
+
+  <section>
+    <h2>10. Privacidad</h2>
+    <p>El contenido de ingeniería de la App funciona en tu dispositivo y no requiere cuenta. Cómo tratamos los datos, incluido el SDK de Meta App Events que se usa solo en Android, se explica en nuestra <a class="inline" href="https://hrsoftware.ar/mechref-privacy/index.es.html">Política de Privacidad</a>, que forma parte de estos Términos.</p>
+  </section>
+
+  <section>
+    <h2>11. Disponibilidad, actualizaciones y finalización</h2>
+    <p>Podemos actualizar la App, cambiar sus funciones o dejar de distribuirla en una plataforma. Las actualizaciones se entregan a través de las tiendas y pueden ser necesarias para que la App siga funcionando correctamente.</p>
+    <p>Podés dejar de usar la App en cualquier momento desinstalándola. Podemos suspender o dar por terminada tu licencia si incumplís estos Términos de forma sustancial, en particular el punto 2. Los puntos 5 a 8 siguen vigentes después de finalizada la licencia.</p>
+  </section>
+
+  <section>
+    <h2>12. Cambios en estos Términos</h2>
+    <p>Podemos actualizar estos Términos a medida que la App cambie o la ley lo exija. La versión revisada se publica en esta página con una nueva fecha de actualización y rige desde su publicación. Seguir usando la App después de eso implica que aceptás los Términos revisados; si no los aceptás, desinstalá la App.</p>
+  </section>
+
+  <section>
+    <h2>13. Ley aplicable y jurisdicción</h2>
+    <p>Estos Términos se rigen por las leyes de la <strong>República Argentina</strong>. Cualquier controversia se someterá a los tribunales ordinarios de la Provincia de San Luis, Argentina, sin perjuicio del tribunal o del foro de defensa del consumidor que la ley imperativa de tu lugar de residencia ponga a tu disposición.</p>
+  </section>
+
+  <section>
+    <h2>14. Contacto</h2>
+    <p>¿Dudas sobre estos Términos? Escribinos a <a class="inline" href="mailto:support@hrsoftware.ar">support@hrsoftware.ar</a> y te respondemos.</p>
+  </section>
+
+</div>
+
+<footer>
+  <ul class="footer-links">
+    <li><a href="index.es.html">Inicio</a></li>
+    <li><a href="modules.es.html">Guía de módulos</a></li>
+    <li><a href="terms.html">English</a></li>
+    <li><a href="https://hrsoftware.ar/mechref-privacy/index.es.html">Política de privacidad</a></li>
+    <li><a href="mailto:support@hrsoftware.ar">Contacto</a></li>
+  </ul>
+  <span>© 2026 HRSoftware · MechRef</span>
+</footer>
+
+</body>
+</html>
